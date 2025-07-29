@@ -1,0 +1,12 @@
+services:
+  stremio:
+    image: tsaridas/stremio-docker:latest
+    container_name: stremio
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - "~/docker/stremio/etc-stremio:/root/.stremio-server"
+    environment:
+      NO_CORS: 1
+      AUTO_SERVER_URL: 1

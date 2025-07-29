@@ -1,0 +1,23 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    restart: unless-stopped
+    ports:
+        - "9925:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+    volumes:
+      - ~/docker/mealie/etc-mealie:/app/data/
+    environment:
+      - TZ=${TZ}
+      - BASE_URL=http://${RASPBERRY_IP}:9925
+      - ALLOW_SIGNUP=true
+      - DEFAULT_GROUP=Dom
+      - DEFAULT_HOUSEHOLD=Rodzina
+
+volumes:
+  mealie-data:
+    driver: local

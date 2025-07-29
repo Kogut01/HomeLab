@@ -1,0 +1,26 @@
+services:
+  dashy:
+    image: lissy93/dashy:latest
+    container_name: dashy
+    restart: always
+    ports:
+      - 8081:8080
+    volumes:
+      - ~/docker/dashy/my-config.yml:/app/user-data/conf.yml
+      - ~/docker/dashy/etc-dashy:/app/user-data/
+    environment:
+      - NODE_ENV=production
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    networks:
+      - custom_bridge
+    healthcheck:
+      test: ['CMD', 'node', '/app/services/healthcheck']
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+networks:
+  custom_bridge:
+    driver: bridge
