@@ -2,25 +2,46 @@ services:
   dashy:
     image: lissy93/dashy:latest
     container_name: dashy
-    restart: always
+    restart: unless-stopped
+
     ports:
-      - 8081:8080
+      - "8081:8080"
+
     volumes:
-      - ~/docker/dashy/my-config.yml:/app/user-data/conf.yml
-      - ~/docker/dashy/etc-dashy:/app/user-data/
+      - type: volume
+        source: data
+        target: /app/user-data/
+        read_only: false
+        volume:
+          nocopy: true
+
+      - type: bind
+        source: ./my-config.yml
+        target: /app/user-data/conf.yml
+        read_only: true
+        bind:
+          create_host_path: false
+
     environment:
       - NODE_ENV=production
+
     dns:
       - 8.8.8.8
       - 8.8.4.4
+
     networks:
       - custom_bridge
+
     healthcheck:
-      test: ['CMD', 'node', '/app/services/healthcheck']
+      test: ["CMD", "node", "/app/services/healthcheck"]
       interval: 1m30s
       timeout: 10s
       retries: 3
       start_period: 40s
+
+volumes:
+  data:
+
 networks:
   custom_bridge:
     driver: bridge

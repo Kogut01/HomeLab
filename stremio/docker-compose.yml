@@ -9,7 +9,7 @@ services:
 
     volumes:
       - type: volume
-        source: stremio_data
+        source: data
         target: /root/.stremio-server
         read_only: false
         volume:
@@ -26,4 +26,4 @@ services:
       retries: 1
 
 volumes:
-  stremio_data:
+  data:

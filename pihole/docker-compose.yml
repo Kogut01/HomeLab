@@ -2,16 +2,40 @@ services:
   pihole:
     image: pihole/pihole:latest
     container_name: pihole
-    restart: always
+    restart: unless-stopped
+
     ports:
       - "53:53/tcp"
       - "53:53/udp"
       - "80:80/tcp"
       - "443:443/tcp"
+
     volumes:
-      - '~/docker/pihole/etc-pihole:/etc/pihole'
-      - '~/docker/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+      - type: volume
+        source: data
+        target: /etc/pihole
+        read_only: false
+        volume:
+          nocopy: true
+
+      - type: bind
+        source: ./etc-dnsmasq.d
+        target: /etc/dnsmasq.d
+        read_only: true
+        bind:
+          create_host_path: false
+
     environment:
-      TZ: '${TZ}'
-      FTLCONF_webserver_api_password: '${PI_HOLE_WEBPASS}'
-      FTLCONF_dns_listeningMode: 'all'
+      TZ: ${TZ}
+      FTLCONF_webserver_api_password: ${PI_HOLE_WEBPASS}
+      FTLCONF_dns_listeningMode: all
+
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost/admin/index.php"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  data:

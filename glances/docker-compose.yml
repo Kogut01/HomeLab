@@ -3,12 +3,28 @@ services:
     image: nicolargo/glances:latest
     container_name: glances
     restart: unless-stopped
+
     ports:
       - "61208:61208"
+
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        read_only: true
+        bind:
+          create_host_path: false
+
     environment:
       - GLANCES_OPT=-w
       - TZ=${TZ}
+
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:61208"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
     privileged: true
     pid: host
