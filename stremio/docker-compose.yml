@@ -3,10 +3,27 @@ services:
     image: tsaridas/stremio-docker:latest
     container_name: stremio
     restart: unless-stopped
+
     ports:
       - "8080:8080"
+
     volumes:
-      - "~/docker/stremio/etc-stremio:/root/.stremio-server"
+      - type: volume
+        source: stremio_data
+        target: /root/.stremio-server
+        read_only: false
+        volume:
+          nocopy: true
+
     environment:
       NO_CORS: 1
       AUTO_SERVER_URL: 1
+
+    healthcheck:
+      test: ["CMD-SHELL", "./restart_if_idle.sh"]
+      interval: 1h
+      start_period: 1h
+      retries: 1
+
+volumes:
+  stremio_data:
