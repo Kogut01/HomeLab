@@ -16,7 +16,7 @@ services:
           nocopy: true
 
       - type: bind
-        source: ./my-config.yml
+        source: ./conf.yml
         target: /app/user-data/conf.yml
         read_only: true
         bind:
