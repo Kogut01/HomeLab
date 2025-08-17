@@ -1,0 +1,101 @@
+pageInfo:
+  title: Home Pepe Lab
+  logo: >-
+    (tutaj umieszczamy logo)
+
+sections:
+  - name: Local Services
+    icon: far fa-server
+    items:
+      - title: Pihole
+        description: Pi-hole blokuje reklamy i trackery poprzez lokalny serwer DNS.
+        icon: si-Pihole
+        statusCheck: true
+        url: (tutaj podajemy adress ip)
+
+      - title: Mealie
+        description: Mealie to samoobsługowy menedżer przepisów z webowym interfejsem.
+        icon: si-Justeat
+        statusCheck: true
+        url: (tutaj podajemy adress ip)
+
+      - title: Stremio
+        description: >-
+          Stremio to aplikacja do strumieniowego oglądania filmów, seriali i
+          kanałów.
+        icon: si-Stremio
+        statusCheck: true
+        url: (tutaj podajemy adress ip)
+
+      - title: Portainer
+        description: >-
+          Portainer to webowy interfejs do zarządzania kontenerami Docker i
+          Kubernetes.
+        icon: si-Portainer
+        statusCheck: true
+        url: (tutaj podajemy adress ip)
+
+      - title: Cockpit
+        description: >-
+          Cockpit to webowy panel do zarządzania serwerami Linux w czasie
+          rzeczywistym.
+        icon: si-Cockpit
+        statusCheck: true
+        url: (tutaj podajemy adress ip)
+
+      - title: Glances
+        description: >-
+          Glances to narzędzie CLI do monitorowania zasobów systemowych w czasie
+          rzeczywistym.
+        icon: si-Pagespeedinsights
+        statusCheck: true
+        url: (tutaj podajemy adress ip)
+
+  - name: My Personal Something
+    icon: far fa-rocket
+    items:
+      - title: GitHub
+        description: My personal Github profile.
+        icon: fab fa-github
+        url: https://github.com/Kogut01
+
+  - name: Widgets
+    icon: si-Raspberrypi
+    widgets:
+      - type: gl-current-cpu
+        options:
+          hostname: (tutaj podajemy adress ip do glancess)
+
+      - type: gl-cpu-history
+        options:
+          hostname: (tutaj podajemy adress ip do glancess)
+          limit: 60
+
+      - type: gl-current-mem
+        options:
+          hostname: (tutaj podajemy adress ip do glances)
+
+      - type: gl-mem-history
+        options:
+          hostname: (tutaj podajemy adress ip do glances)
+          limit: 60
+
+      - type: gl-disk-space
+        options:
+          hostname: (tutaj podajemy adress ip do glances)
+
+      - type: gl-alerts
+        options:
+          hostname: (tutaj podajemy adress ip do glances)
+
+appConfig:
+  theme: adventure
+  layout: auto
+  iconSize: large
+  language: pl
+  enableMaterialDesignIcons: true
+  enableMultiTasking: true
+  hideComponents:
+    hideFooter: true
+    hideNav: true
+    hideSettings: true
