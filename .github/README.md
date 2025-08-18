@@ -19,12 +19,12 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 - [/.env](.env) – Twoje wartości zmiennych (lokalnie)
 - [LICENSE](LICENSE)
 
-### Wymagania
+## Wymagania
 - Docker i Docker Compose
 - System Linux (np. Raspberry Pi OS)
 - Dostęp do powłoki na hoście (SSH lub lokalnie)
 
-### Konfiguracja środowiska
+## Konfiguracja środowiska
 1. Sklonuj repo:
    ```sh
    git clone https://github.com/Kogut01/HomeLab.git
@@ -45,7 +45,7 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
      ./set_auto_ip.sh
      ```
 
-### Uruchamianie usług
+## Uruchamianie usług
 Masz dwie opcje przekazywania pliku `.env` do Docker Compose:
 
 1. Eksport ścieżki do `.env` (Twoja notatka – zachowane):
@@ -59,7 +59,7 @@ Masz dwie opcje przekazywania pliku `.env` do Docker Compose:
     docker compose --env-file ../.env up -d
     ```
 
-Uruchamianie pojedynczych usług (przykłady):
+## Uruchamianie pojedynczych usług (przykłady):
 ```sh
 # Dashy
 cd dashy && docker compose up -d
@@ -93,6 +93,7 @@ Adresy są również wpisane w [dashy/my-config.yml](dashy/my-config.yml) dla sz
 - Dashy: edytuj [dashy/my-config.yml](dashy/my-config.yml), a plik jest montowany do `/app/user-data/conf.yml`.  
 - Pi‑hole: dodatkowe pliki konfiguracyjne DNSMasq umieszczaj w [pihole/etc-dnsmasq.d](pihole/etc-dnsmasq.d).  
 - Mealie: ustaw `BASE_URL` w `.env` zgodnie z Twoim IP i portem.  
+```
 
 ## Aktualizacja, logi, serwis
 ```sh
@@ -108,7 +109,7 @@ docker compose down
 ```
 
 
-### Bezpieczeństwo
+## Bezpieczeństwo
 - Nie umieszczaj prawdziwych haseł/sekretów w repo publicznym. Używaj `.env` lokalnie.
 - Rozważ zmianę domyślnych haseł, używaj HTTPS (NPM) oraz regularnie aktualizuj obrazy.
 
