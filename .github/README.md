@@ -19,8 +19,8 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 | 🚌 [`Auto_ip`](../set_auto_ip.sh) | Skrypt ustawiania DHCP. |
 
 | | |
-| - | - |
-| 📜 [`Licencja`](./LICENCE) |
+| :--- | :---: |
+| 📜 [`Licencja`]() | Licencja MIT |
 
 </div>
 
