@@ -69,23 +69,8 @@ Masz dwie opcje przekazywania pliku `.env` do Docker Compose:
 
 ## Uruchamianie pojedynczych usług (przykłady):
 ```sh
-# Dashy
+# Przykład użycia dla Dashy
 cd dashy && docker compose up -d
-
-# Portainer
-cd portainer && docker compose up -d
-
-# Pi-hole
-cd pihole && docker compose up -d
-
-# Glances
-cd glances && docker compose up -d
-
-# Mealie
-cd mealie && docker compose up -d
-
-# Stremio
-cd stremio && docker compose up -d
 ```
 
 ## Aktualizacja, logi, serwis
