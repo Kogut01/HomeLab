@@ -15,12 +15,12 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 | ⚓️ [`Portainer`](../portainer/docker-compose.yml) | Portainer CE. |
 | 🎬 [`Stremio`](../stremio/docker-compose.yml) | Stremio server. |
 | 🪨 [`.env`](../.env_example) | Przykład zmiennych środowiskowych. | 
-| ⌨️ [`Set_ip`](../set_static_ip.sh) | Skrypt ustawiania statycznego IP. |
+| ⌨️ [`Static_ip`](../set_static_ip.sh) | Skrypt ustawiania statycznego IP. |
 | 🚌 [`Auto_ip`](../set_auto_ip.sh) | Skrypt ustawiania DHCP. |
 
 | | |
 | :--- | :---: |
-| 📜 [`Licencja`]() | Licencja MIT |
+| 📜 [`Licencja`](../LICENSE) | Licencja MIT |
 
 </div>
 
@@ -44,10 +44,12 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 3. Opcjonalnie ustaw IP:
    - Statyczne:  
      ```sh
+     sudo chmod a+w ./set_static_ip.sh
      ./set_static_ip.sh
      ```
    - Automatyczne (DHCP):  
      ```sh
+     sudo chmod a+w ./set_auto_ip.sh
      ./set_auto_ip.sh
      ```
 
@@ -84,21 +86,6 @@ cd mealie && docker compose up -d
 
 # Stremio
 cd stremio && docker compose up -d
-
-## Dostęp do usług (domyślne porty)
-- Dashy: http://RASPBERRY_IP:8081
-- Portainer: https://RASPBERRY_IP:9443
-- Pi‑hole: http://RASPBERRY_IP (port 80) oraz https://RASPBERRY_IP (port 443)
-- Glances (web): http://RASPBERRY_IP:61208
-- Mealie: http://RASPBERRY_IP:9925
-- Stremio: http://RASPBERRY_IP:8080
-
-Adresy są również wpisane w [dashy/my-config.yml](dashy/my-config.yml) dla szybkiego dostępu z pulpitu.
-
-## Konfiguracja usług – uwagi
-- Dashy: edytuj [dashy/my-config.yml](dashy/my-config.yml), a plik jest montowany do `/app/user-data/conf.yml`.  
-- Pi‑hole: dodatkowe pliki konfiguracyjne DNSMasq umieszczaj w [pihole/etc-dnsmasq.d](pihole/etc-dnsmasq.d).  
-- Mealie: ustaw `BASE_URL` w `.env` zgodnie z Twoim IP i portem.  
 ```
 
 ## Aktualizacja, logi, serwis
@@ -122,6 +109,3 @@ docker compose down
 ## Pihole blocklist
 - https://cert.pl/posts/2020/03/ostrzezenia_phishing/
 - https://firebog.net/
-
-## Licencja
-Projekt na licencji MIT – szczegóły w [LICENSE](LICENSE).
