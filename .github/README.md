@@ -2,22 +2,28 @@
 
 Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspberry Pi: Portainer, Pi‑hole, Dashy, Glances, Mealie oraz Stremio. Każda usługa ma własny katalog z plikiem `docker-compose.yml` i współdzieli wspólny plik konfiguracji `.env`.
 
-### Struktura repozytorium
-- [dashy/docker-compose.yml](dashy/docker-compose.yml) – dashboard (Lissy93/Dashy)
-  - [dashy/my-config.yml](dashy/my-config.yml) – aktywna konfiguracja
-  - [dashy/conf.yml](dashy/conf.yml) – wzorcowy szablon
-- [glances/docker-compose.yml](glances/docker-compose.yml) – monitoring systemu (Glances)
-- [mealie/docker-compose.yml](mealie/docker-compose.yml) – menedżer przepisów (Mealie)
+### ↳ Struktura repozytorium
 
-- [pihole/docker-compose.yml](pihole/docker-compose.yml) – Pi‑hole
-  - [pihole/etc-dnsmasq.d/](pihole/etc-dnsmasq.d) – dodatkowa konfiguracja DNSMasq
-- [portainer/docker-compose.yml](portainer/docker-compose.yml) – Portainer CE
-- [stremio/docker-compose.yml](stremio/docker-compose.yml) – Stremio server
-- [set_static_ip.sh](set_static_ip.sh) – skrypt ustawiania statycznego IP
-- [set_auto_ip.sh](set_auto_ip.sh) – skrypt ustawiania DHCP
-- [/.env_example](.env_example) – przykład zmiennych środowiskowych
-- [/.env](.env) – Twoje wartości zmiennych (lokalnie)
-- [LICENSE](LICENSE)
+<div align="center">
+
+| Linki | Opis |
+| :--- | :---: |
+| 🚀 [`Dashy`](../dashy/docker-compose.yml) | dashboard - [Lissy93/Dashy](https://github.com/Lissy93/dashy). |
+| 📊 [`Glances`](../glances/docker-compose.yml) | monitoring systemu (Glances). |
+| 🍔 [`Mealie`](../mealie/docker-compose.yml) | menedżer przepisów (Mealie). |
+| 🍓 [`Pi-hole`](../pihole/docker-compose.yml) | Pi‑hole z udawaną maliną na ikonce. |
+| ⚓️ [`Portainer`](../portainer/docker-compose.yml) | Portainer CE. |
+| 🎬 [`Stremio`](../stremio/docker-compose.yml) | Stremio server. |
+| 🪨 [`.env`](../.env_example) | Przykład zmiennych środowiskowych. | 
+| ⌨️ [`Set_ip`](../set_static_ip.sh) | Skrypt ustawiania statycznego IP. |
+| 🚌 [`Auto_ip`](../set_auto_ip.sh) | Skrypt ustawiania DHCP. |
+
+| | |
+| - | - |
+| 📜 [`Licencja`](./LICENCE) |
+
+</div>
+
 
 ## Wymagania
 - Docker i Docker Compose
