@@ -14,6 +14,7 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 | 🍓 [`Pi-hole`](../pihole/docker-compose.yml) | Pi‑hole z udawaną maliną na ikonce. |
 | ⚓️ [`Portainer`](../portainer/docker-compose.yml) | Portainer CE. |
 | 🎬 [`Stremio`](../stremio/docker-compose.yml) | Stremio server. |
+| ☁️ [`OwnCloud`](../owncloud/docker-compose.yml) | OwnCloud server. |
 | 🪨 [`.env`](../.env_example) | Przykład zmiennych środowiskowych. | 
 | ⌨️ [`Static_ip`](../set_static_ip.sh) | Skrypt ustawiania statycznego IP. |
 | 🚌 [`Auto_ip`](../set_auto_ip.sh) | Skrypt ustawiania DHCP. |
