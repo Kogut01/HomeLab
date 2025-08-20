@@ -8,16 +8,16 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 
 | Linki | Opis |
 | :--- | :---: |
-| 🚀 [`Dashy`](../dashy/docker-compose.yml) | dashboard - [Lissy93/Dashy](https://github.com/Lissy93/dashy). |
-| 📊 [`Glances`](../glances/docker-compose.yml) | monitoring systemu (Glances). |
-| 🍔 [`Mealie`](../mealie/docker-compose.yml) | menedżer przepisów (Mealie). |
-| 🍓 [`Pi-hole`](../pihole/docker-compose.yml) | Pi‑hole z udawaną maliną na ikonce. |
-| ⚓️ [`Portainer`](../portainer/docker-compose.yml) | Portainer CE. |
-| 🎬 [`Stremio`](../stremio/docker-compose.yml) | Stremio server. |
-| ☁️ [`OwnCloud`](../owncloud/docker-compose.yml) | OwnCloud server. |
-| 🪨 [`.env`](../.env_example) | Przykład zmiennych środowiskowych. | 
+| 🚀 [`Dashy`](../dashy/docker-compose.yml) | Dashboard domowy – [Lissy93/Dashy](https://github.com/Lissy93/dashy). |
+| 📊 [`Glances`](../glances/docker-compose.yml) | Monitoring systemu (web UI + API). |
+| 🍔 [`Mealie`](../mealie/docker-compose.yml) | Menedżer przepisów i planowania posiłków. |
+| 🍓 [`Pi-hole`](../pihole/docker-compose.yml) | DNS sinkhole – blokowanie reklam i trackerów. |
+| ⚓️ [`Portainer`](../portainer/docker-compose.yml) | Portainer CE – zarządzanie kontenerami Docker. |
+| 🎬 [`Stremio`](../stremio/docker-compose.yml) | Stremio server (serwer usług/wtyczek). |
+| ☁️ [`OwnCloud`](../owncloud/docker-compose.yml) | Chmura plików OwnCloud. |
+| 🪨 [`.env`](../.env_example) | Szablon zmiennych środowiskowych. |
 | ⌨️ [`Static_ip`](../set_static_ip.sh) | Skrypt ustawiania statycznego IP. |
-| 🚌 [`Auto_ip`](../set_auto_ip.sh) | Skrypt ustawiania DHCP. |
+| 🚌 [`Auto_ip`](../set_auto_ip.sh) | Skrypt powrotu do DHCP. |
 
 | | |
 | :--- | :---: |
