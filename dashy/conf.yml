@@ -1,31 +1,37 @@
 pageInfo:
   title: Home Pepe Lab
   logo: >-
-    (tutaj umieszczamy logo)
+    (tutaj miejsce na swoje logo)
 
 sections:
   - name: Local Services
     icon: far fa-server
     items:
-      - title: Pihole
-        description: Pi-hole blokuje reklamy i trackery poprzez lokalny serwer DNS.
-        icon: si-Pihole
-        statusCheck: true
-        url: (tutaj podajemy adress ip)
-
-      - title: Mealie
-        description: Mealie to samoobsługowy menedżer przepisów z webowym interfejsem.
-        icon: si-Justeat
-        statusCheck: true
-        url: (tutaj podajemy adress ip)
-
       - title: Stremio
         description: >-
           Stremio to aplikacja do strumieniowego oglądania filmów, seriali i
           kanałów.
         icon: si-Stremio
         statusCheck: true
-        url: (tutaj podajemy adress ip)
+        url: (tutaj miejsce na swój URL)
+        
+      - title: ownCloud
+        description: ownCloud to platforma do hostowania prywatnej chmury i synchronizacji plików.
+        icon: si-icloud
+        statusCheck: true
+        url: (tutaj miejsce na swój URL)
+
+      - title: Mealie
+        description: Mealie to samoobsługowy menedżer przepisów z webowym interfejsem.
+        icon: si-Justeat
+        statusCheck: true
+        url: (tutaj miejsce na swój URL)
+
+      - title: Pihole
+        description: Pi-hole blokuje reklamy i trackery poprzez lokalny serwer DNS.
+        icon: si-Pihole
+        statusCheck: true
+        url: (tutaj miejsce na swój URL)
 
       - title: Portainer
         description: >-
@@ -33,7 +39,7 @@ sections:
           Kubernetes.
         icon: si-Portainer
         statusCheck: true
-        url: (tutaj podajemy adress ip)
+        url: (tutaj miejsce na swój URL)
 
       - title: Cockpit
         description: >-
@@ -41,7 +47,7 @@ sections:
           rzeczywistym.
         icon: si-Cockpit
         statusCheck: true
-        url: (tutaj podajemy adress ip)
+        url: (tutaj miejsce na swój URL)
 
       - title: Glances
         description: >-
@@ -49,7 +55,7 @@ sections:
           rzeczywistym.
         icon: si-Pagespeedinsights
         statusCheck: true
-        url: (tutaj podajemy adress ip)
+        url: (tutaj miejsce na swój URL)
 
   - name: My Personal Something
     icon: far fa-rocket
@@ -64,29 +70,29 @@ sections:
     widgets:
       - type: gl-current-cpu
         options:
-          hostname: (tutaj podajemy adress ip do glancess)
+          hostname: (tutaj miejsce na swój URL)
 
       - type: gl-cpu-history
         options:
-          hostname: (tutaj podajemy adress ip do glancess)
+          hostname: (tutaj miejsce na swój URL)
           limit: 60
 
       - type: gl-current-mem
         options:
-          hostname: (tutaj podajemy adress ip do glances)
+          hostname: (tutaj miejsce na swój URL)
 
       - type: gl-mem-history
         options:
-          hostname: (tutaj podajemy adress ip do glances)
+          hostname: (tutaj miejsce na swój URL)
           limit: 60
 
       - type: gl-disk-space
         options:
-          hostname: (tutaj podajemy adress ip do glances)
+          hostname: (tutaj miejsce na swój URL)
 
       - type: gl-alerts
         options:
-          hostname: (tutaj podajemy adress ip do glances)
+          hostname: (tutaj miejsce na swój URL)
 
 appConfig:
   theme: adventure
