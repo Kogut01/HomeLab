@@ -17,7 +17,7 @@ services:
 
     environment:
       - OWNCLOUD_VOLUME_FILES=/mnt/owncloud_disk
-      - OWNCLOUD_DOMAIN=${RASPBERRY_IP}:8082
+      - OWNCLOUD_DOMAIN=${RASPBERRY_IP}:${OWNCLOUD_PORT}
       - OWNCLOUD_DB_TYPE=mysql
       - OWNCLOUD_DB_NAME=owncloud
       - OWNCLOUD_DB_USERNAME=${OWNCLOUD_DB_USERNAME}
