@@ -41,14 +41,6 @@ sections:
         statusCheck: true
         url: (tutaj miejsce na swój URL)
 
-      - title: Cockpit
-        description: >-
-          Cockpit to webowy panel do zarządzania serwerami Linux w czasie
-          rzeczywistym.
-        icon: si-Cockpit
-        statusCheck: true
-        url: (tutaj miejsce na swój URL)
-
       - title: Glances
         description: >-
           Glances to narzędzie CLI do monitorowania zasobów systemowych w czasie
