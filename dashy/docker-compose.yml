@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "8081:8080"
+      - "${DASHY_PORT}:8080"
 
     volumes:
       - type: volume

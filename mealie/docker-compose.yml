@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
 
     ports:
-        - "9925:9000"
+        - "${MEALIE_PORT}:9000"
 
     volumes:
       - type: volume

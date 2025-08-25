@@ -27,7 +27,7 @@ services:
 
     environment:
       TZ: ${TZ}
-      FTLCONF_webserver_api_password: ${PI_HOLE_WEBPASS}
+      FTLCONF_webserver_api_password: ${PIHOLE_WEBPASS}
       FTLCONF_dns_listeningMode: all
 
     healthcheck:

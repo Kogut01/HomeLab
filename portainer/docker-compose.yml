@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "9443:9443"
+      - "${PORTAINER_PORT}:9443"
 
     volumes:
       - type: volume

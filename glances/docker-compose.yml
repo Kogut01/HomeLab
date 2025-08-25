@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "61208:61208"
+      - "${GLANCES_PORT}:61208"
 
     volumes:
       - type: bind
