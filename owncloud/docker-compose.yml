@@ -39,6 +39,11 @@ services:
       timeout: 10s
       retries: 5
 
+    networks:
+      - server_tier
+      - database_tier
+      - cache_tier
+
   mariadb:
     image: mariadb:10.11
     container_name: owncloud_mariadb
@@ -67,6 +72,9 @@ services:
       timeout: 5s
       retries: 5
 
+    networks:
+      - database_tier
+
   redis:
     image: redis:6
     container_name: owncloud_redis
@@ -88,7 +96,14 @@ services:
       timeout: 5s
       retries: 5
 
+    networks:
+      - cache_tier
+
 volumes:
   mysql:
   redis:
 
+networks:
+  server_tier:
+  database_tier:
+  cache_tier:
