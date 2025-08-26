@@ -5,7 +5,7 @@ pageInfo:
 
 sections:
   - name: Local Services
-    icon: far fa-server
+    icon: si-Openmediavault
     items:
       - title: Stremio
         description: >-
@@ -50,7 +50,7 @@ sections:
         url: (tutaj miejsce na swój URL)
 
   - name: My Personal Something
-    icon: far fa-rocket
+    icon: si-Letsencrypt
     items:
       - title: GitHub
         description: My personal Github profile.
@@ -60,29 +60,21 @@ sections:
   - name: Widgets
     icon: si-Raspberrypi
     widgets:
-      - type: gl-current-cpu
+      - type: gl-alerts
         options:
           hostname: (tutaj miejsce na swój URL)
 
       - type: gl-cpu-history
         options:
           hostname: (tutaj miejsce na swój URL)
-          limit: 60
-
-      - type: gl-current-mem
-        options:
-          hostname: (tutaj miejsce na swój URL)
+          limit: 600
 
       - type: gl-mem-history
         options:
           hostname: (tutaj miejsce na swój URL)
-          limit: 60
+          limit: 600
 
       - type: gl-disk-space
-        options:
-          hostname: (tutaj miejsce na swój URL)
-
-      - type: gl-alerts
         options:
           hostname: (tutaj miejsce na swój URL)
 
