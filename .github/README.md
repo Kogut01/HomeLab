@@ -86,12 +86,3 @@ docker compose logs -f
 docker compose restart
 docker compose down
 ```
-
-
-## Bezpieczeństwo
-- Nie umieszczaj prawdziwych haseł/sekretów w repo publicznym. Używaj `.env` lokalnie.
-- Rozważ zmianę domyślnych haseł, używaj HTTPS (NPM) oraz regularnie aktualizuj obrazy.
-
-## Pihole blocklist
-- https://cert.pl/posts/2020/03/ostrzezenia_phishing/
-- https://firebog.net/
