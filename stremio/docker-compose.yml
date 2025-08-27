@@ -19,6 +19,8 @@ services:
       NO_CORS: 1
       AUTO_SERVER_URL: 1
 
+    mem_limit: 4096m
+
     healthcheck:
       test: ["CMD-SHELL", "./restart_if_idle.sh"]
       interval: 1h

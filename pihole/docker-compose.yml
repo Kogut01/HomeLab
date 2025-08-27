@@ -30,6 +30,8 @@ services:
       FTLCONF_webserver_api_password: ${PIHOLE_WEBPASS}
       FTLCONF_dns_listeningMode: all
 
+    mem_limit: 1024m
+
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost/admin/index.php"]
       interval: 30s

@@ -16,7 +16,7 @@ services:
           nocopy: true
 
       - type: bind
-        source: ./conf.yml
+        source: ./my-config.yml
         target: /app/user-data/conf.yml
         read_only: true
         bind:
@@ -28,6 +28,8 @@ services:
     dns:
       - 8.8.8.8
       - 8.8.4.4
+
+    mem_limit: 2048m
 
     healthcheck:
       test: ["CMD", "node", "/app/services/healthcheck"]

@@ -22,6 +22,8 @@ services:
         bind:
           create_host_path: false
 
+    mem_limit: 512m
+
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:9443"]
       interval: 30s

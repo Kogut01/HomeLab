@@ -33,6 +33,8 @@ services:
       - mariadb
       - redis
 
+    mem_limit: 2048m
+
     healthcheck:
       test: ["CMD", "/usr/bin/healthcheck"]
       interval: 30s
@@ -66,6 +68,8 @@ services:
 
     command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
 
+    mem_limit: 2048m
+
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-u", "root", "--password=owncloud"]
       interval: 10s
@@ -89,6 +93,8 @@ services:
           nocopy: true
 
     command: ["--databases", "1"]
+
+    mem_limit: 2048m
 
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]

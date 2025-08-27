@@ -19,6 +19,8 @@ services:
       - GLANCES_OPT=-w
       - TZ=${TZ}
 
+    mem_limit: 256m
+
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:61208"]
       interval: 30s
