@@ -1,7 +1,8 @@
 # Personal .gitignore for my Homelab #
 ######################################
-!.secret
-!.env
+.secret
+.env
+dashy/my-config.yml
 
 # Common .gitignore #
 #####################
