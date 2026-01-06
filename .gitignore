@@ -2,7 +2,7 @@
 ######################################
 .secret
 .env
-dashy/my-config.yml
+dashy/conf.yml
 
 # Common .gitignore #
 #####################

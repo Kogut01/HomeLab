@@ -33,14 +33,6 @@ sections:
         statusCheck: true
         url: (tutaj miejsce na swój URL)
 
-      - title: Portainer
-        description: >-
-          Portainer to webowy interfejs do zarządzania kontenerami Docker i
-          Kubernetes.
-        icon: si-Portainer
-        statusCheck: true
-        url: (tutaj miejsce na swój URL)
-
       - title: Glances
         description: >-
           Glances to narzędzie CLI do monitorowania zasobów systemowych w czasie

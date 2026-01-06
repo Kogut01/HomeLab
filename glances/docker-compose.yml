@@ -5,7 +5,8 @@ services:
     restart: unless-stopped
 
     ports:
-      - "${GLANCES_PORT}:61208"
+      - "${GLANCES_PORT_1}:61208"
+      - "${GLANCES_PORT_2}:61209"
 
     volumes:
       - type: bind
@@ -22,7 +23,7 @@ services:
     mem_limit: 256m
 
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:61208"]
+      test: ["CMD", "curl", "-f", "-s", "http://localhost:61208"]
       interval: 30s
       timeout: 10s
       retries: 3
