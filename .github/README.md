@@ -12,7 +12,6 @@ Nowoczesny, prosty do uruchomienia zestaw usług self‑hosted dla mojej Raspber
 | 📊 [`Glances`](../glances/docker-compose.yml) | Monitoring systemu (web UI + API). |
 | 🍔 [`Mealie`](../mealie/docker-compose.yml) | Menedżer przepisów i planowania posiłków. |
 | 🍓 [`Pi-hole`](../pihole/docker-compose.yml) | DNS sinkhole – blokowanie reklam i trackerów. |
-| ⚓️ [`Portainer`](../portainer/docker-compose.yml) | Portainer CE – zarządzanie kontenerami Docker. |
 | 🎬 [`Stremio`](../stremio/docker-compose.yml) | Stremio server (serwer usług/wtyczek). |
 | ☁️ [`OwnCloud`](../owncloud/docker-compose.yml) | Chmura plików OwnCloud. |
 | 🪨 [`.env`](../.env_example) | Szablon zmiennych środowiskowych. |
