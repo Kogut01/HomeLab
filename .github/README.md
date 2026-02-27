@@ -1,5 +1,4 @@
 <div align="center">
-
 # 🏠 HomeLab
 
 **Modularny stos usług self‑hosted na Raspberry Pi, zarządzany przez Docker Compose.**
@@ -23,6 +22,7 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 - [Struktura repozytorium](#-struktura-repozytorium)
 - [Licencja](#-licencja)
 
+
 ## 🧩 Usługi
 
 <div align="center">
@@ -41,6 +41,7 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 
 </div>
 
+
 ## ✅ Wymagania
 
 <div align="center">
@@ -53,6 +54,7 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 | Dostęp | SSH lub terminal lokalny |
 
 </div>
+
 
 ## 🚀 Szybki start
 
@@ -98,6 +100,7 @@ Lub podaj plik `.env` jawnie:
 cd dashy && docker compose --env-file ../.env up -d
 ```
 
+
 ## 🌐 Konfiguracja sieci
 
 Repozytorium zawiera skrypty pomocnicze do zarządzania adresem IP hosta:
@@ -114,6 +117,7 @@ sudo bash ./set_static_ip.sh
 # Powrót do DHCP
 sudo bash ./set_auto_ip.sh
 ```
+
 
 ## 🔧 Zarządzanie usługami
 
@@ -136,28 +140,46 @@ docker compose restart
 docker compose down
 ```
 
+
 ## 📂 Struktura repozytorium
 
 ```
 HomeLab/
-├── .env_example              # Szablon zmiennych środowiskowych
-├── .github/                  # CI/CD, Dependabot, konfiguracja GitHub
+├── .env_example                        # 📜 Szablon zmiennych środowiskowych
+├── .github/                            # ⚙️ CI/CD, Dependabot, konfiguracja GitHub
 │   ├── workflows/
 │   └── dependabot.yml
-├── dashy/                    # 🚀 Dashboard
-├── filebrowser/              # 📁 Menedżer plików
-├── glances/                  # 📊 Monitoring systemu
-├── home-assistant/           # 🏠 Automatyka domowa
+├── dashy/                              # 🚀 Dashboard
+│   ├── docker-compose.yml
 │   └── config/
-├── mealie/                   # 🍔 Przepisy kulinarne
-├── mqtt/                     # 🔗 Broker MQTT
-├── pihole/                   # 🍓 DNS ad‑blocker
-├── stremio/                  # 🎬 Serwer multimedialny
-├── zigbee2mqtt/              # 📡 Most Zigbee → MQTT
-├── set_static_ip.sh          # ⌨️ Statyczny IP
-├── set_auto_ip.sh            # 🚌 Powrót do DHCP
-└── LICENSE                   # 📜 MIT
+│       └── conf-example.yml            # ⚙️ Przykładowa konfiguracja Dashy
+├── filebrowser/                        # 📁 Menedżer plików
+│   └── docker-compose.yml
+├── glances/                            # 📊 Monitoring systemu
+│   └── docker-compose.yml
+├── home-assistant/                     # 🏠 Automatyka domowa
+│   └── docker-compose.yml
+├── mealie/                             # 🍔 Przepisy kulinarne
+│   └── docker-compose.yml
+├── mqtt/                               # 🔗 Broker MQTT (Mosquitto)
+│   └── docker-compose.yml
+├── pihole/                             # 🍓 DNS ad‑blocker
+│   ├── docker-compose.yml
+│   ├── blacklist/
+│   │   └── blacklist_urls.txt          # 🚪 Własna blacklista URL
+│   └── config/
+│       └── etc-dnsmasq.d               # ⚙️ Konfiguracja dnsmasq
+├── stremio/                            # 🎬 Serwer multimedialny
+│   └── docker-compose.yml
+├── zigbee2mqtt/                        # 📡 Most Zigbee → MQTT
+│   ├── docker-compose.yml
+│   └── config/
+│       └── conf-example.yml            # ⚙️ Przykładowa konfiguracja
+├── set_static_ip.sh                    # ⌨️ Ustawienie statycznego IP
+├── set_auto_ip.sh                      # 🚌 Powrót do DHCP
+└── LICENSE                             # 📜 Licencja MIT
 ```
+
 
 ## 📜 Licencja
 
