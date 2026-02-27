@@ -8,14 +8,10 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-c51a4a?logo=raspberrypi&logoColor=white)](https://www.raspberrypi.com/)
 
----
-
 Każda usługa posiada własny katalog z plikiem `docker-compose.yml`.  
 Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 
 </div>
-
----
 
 ## 📋 Spis treści
 
@@ -26,8 +22,6 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 - [Zarządzanie usługami](#-zarządzanie-usługami)
 - [Struktura repozytorium](#-struktura-repozytorium)
 - [Licencja](#-licencja)
-
----
 
 ## 🧩 Usługi
 
@@ -47,8 +41,6 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 
 </div>
 
----
-
 ## ✅ Wymagania
 
 <div align="center">
@@ -61,8 +53,6 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 | Dostęp | SSH lub terminal lokalny |
 
 </div>
-
----
 
 ## 🚀 Szybki start
 
@@ -108,8 +98,6 @@ Lub podaj plik `.env` jawnie:
 cd dashy && docker compose --env-file ../.env up -d
 ```
 
----
-
 ## 🌐 Konfiguracja sieci
 
 Repozytorium zawiera skrypty pomocnicze do zarządzania adresem IP hosta:
@@ -126,8 +114,6 @@ sudo bash ./set_static_ip.sh
 # Powrót do DHCP
 sudo bash ./set_auto_ip.sh
 ```
-
----
 
 ## 🔧 Zarządzanie usługami
 
@@ -149,8 +135,6 @@ docker compose restart
 # ⏹ Zatrzymanie i usunięcie kontenerów
 docker compose down
 ```
-
----
 
 ## 📂 Struktura repozytorium
 
@@ -174,8 +158,6 @@ HomeLab/
 ├── set_auto_ip.sh            # 🚌 Powrót do DHCP
 └── LICENSE                   # 📜 MIT
 ```
-
----
 
 ## 📜 Licencja
 
