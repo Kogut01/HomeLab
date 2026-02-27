@@ -1,0 +1,35 @@
+pageInfo:
+  title: (Miejsce na tytuł strony)
+  logo: >-
+    (Miejsce na swoje logo)
+
+sections:
+  - name: (Miejsce na nazwę sekcji np. Local Services)
+    icon: (Miejsce na ikonę sekcji, np. si-Openmediavault)
+    items:
+      - title: (Miejsce na tytuł usługi)
+        description: >-
+          (Miejsce na opis usługi)
+        icon: (Miejsce na ikonę usługi, np. si-Homeassistant)
+        statusCheck: true
+        url: (Miejsce na swój URL)
+
+  - name: (Miejsce na nazwę sekcji np. Widgets)
+    icon: (Miejsce na ikonę sekcji, np. si-Raspberrypi)
+    items:
+      widgets:
+      - type: (Miejsce na typ widgetu, np. gl-alerts)
+        options:
+          hostname: (Miejsce na hostname do widgetu, np. http:// )
+
+appConfig:
+  theme: adventure
+  layout: auto
+  iconSize: large
+  language: pl
+  enableMaterialDesignIcons: true
+  enableMultiTasking: true
+  hideComponents:
+    hideFooter: true
+    hideNav: true
+    hideSettings: true

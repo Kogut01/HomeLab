@@ -8,17 +8,17 @@ services:
         - "${MEALIE_PORT}:9000"
 
     volumes:
-      - type: volume
-        source: data
+      - type: bind
+        source: ./data
         target: /app/data/
         read_only: false
-        volume:
-          nocopy: true
+        bind:
+          create_host_path: true
 
     environment:
       - TZ=${TZ}
       - BASE_URL=http://${RASPBERRY_IP}:${MEALIE_PORT}
-      - ALLOW_SIGNUP=true
+      - ALLOW_SIGNUP=false
       - DEFAULT_GROUP=Dom
       - DEFAULT_HOUSEHOLD=Rodzina
 
@@ -30,6 +30,3 @@ services:
       timeout: 10s
       retries: 3
       start_period: 30s
-
-volumes:
-  data:

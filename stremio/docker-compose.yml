@@ -22,10 +22,11 @@ services:
     mem_limit: 4096m
 
     healthcheck:
-      test: ["CMD-SHELL", "./restart_if_idle.sh"]
-      interval: 1h
-      start_period: 1h
-      retries: 1
+      test: ["CMD", "curl", "-f", "-s", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
 volumes:
   data:

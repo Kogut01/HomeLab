@@ -1,0 +1,20 @@
+homeassistant:
+  enabled: true
+frontend:
+  enabled: true
+  port: 8080
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://mqtt:1883
+  user: (Miejsce na użytkownika MQTT)
+  password: (Miejsce na hasło użytkownika MQTT)
+serial:
+  port: /dev/ttyACM0
+availability:
+  enabled: true
+  active:
+    timeout: 10
+advanced:
+  channel: 26
+device_options: {}
+version: 5

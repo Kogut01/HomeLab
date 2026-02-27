@@ -19,11 +19,11 @@ services:
           nocopy: true
 
       - type: bind
-        source: ./etc-dnsmasq.d
+        source: ./config/etc-dnsmasq.d
         target: /etc/dnsmasq.d
         read_only: true
         bind:
-          create_host_path: false
+          create_host_path: true
 
     environment:
       TZ: ${TZ}

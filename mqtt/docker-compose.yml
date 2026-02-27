@@ -1,0 +1,49 @@
+services:
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    restart: unless-stopped
+
+    ports:
+        - "${MQTT_PORT_1}:1883"
+        - "${MQTT_PORT_2}:9001"
+
+    volumes:
+        - type: bind
+          source: ./config
+          target: /mosquitto/config
+          read_only: false
+          bind:
+            create_host_path: true
+
+        - type: volume
+          source: data
+          target: /mosquitto/data
+          read_only: false
+          volume:
+            nocopy: true
+
+        - type: volume
+          source: log
+          target: /mosquitto/log
+          read_only: false
+          volume:
+            nocopy: true
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-s", "http://localhost:1883"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+    networks:
+        - homeassistant
+
+volumes:
+  data:
+  log:
+
+networks:
+  homeassistant:
+    external: true
