@@ -1,4 +1,5 @@
 <div align="center">
+
 # 🏠 HomeLab
 
 **Modularny stos usług self‑hosted na Raspberry Pi, zarządzany przez Docker Compose.**
@@ -22,6 +23,7 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 - [Struktura repozytorium](#-struktura-repozytorium)
 - [Licencja](#-licencja)
 
+<br>
 
 ## 🧩 Usługi
 
@@ -41,6 +43,7 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 
 </div>
 
+<br>
 
 ## ✅ Wymagania
 
@@ -55,6 +58,7 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 
 </div>
 
+<br>
 
 ## 🚀 Szybki start
 
@@ -100,6 +104,7 @@ Lub podaj plik `.env` jawnie:
 cd dashy && docker compose --env-file ../.env up -d
 ```
 
+<br>
 
 ## 🌐 Konfiguracja sieci
 
@@ -118,6 +123,7 @@ sudo bash ./set_static_ip.sh
 sudo bash ./set_auto_ip.sh
 ```
 
+<br>
 
 ## 🔧 Zarządzanie usługami
 
@@ -140,6 +146,7 @@ docker compose restart
 docker compose down
 ```
 
+<br>
 
 ## 📂 Struktura repozytorium
 
@@ -180,6 +187,7 @@ HomeLab/
 └── LICENSE                             # 📜 Licencja MIT
 ```
 
+<br>
 
 ## 📜 Licencja
 
