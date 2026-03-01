@@ -1,0 +1,28 @@
+services:
+  app:
+    image: 'docker.io/jc21/nginx-proxy-manager:latest'
+    container_name: nginx-proxy
+    restart: unless-stopped
+
+    ports:
+      - '80:80'
+      - '443:443'
+      - '${NGINX_PROXY_PORT}:81'
+
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data
+        read_only: false
+        bind:
+            create_host_path: true
+
+      - type: bind
+        source: ./letsencrypt
+        target: /etc/letsencrypt
+        read_only: false
+        bind:
+            create_host_path: true
+
+    environment:
+      TZ: ${TZ}
