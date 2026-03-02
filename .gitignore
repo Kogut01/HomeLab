@@ -7,8 +7,9 @@ conf.yml
 mealie/data/
 mqtt/config/
 home-assistant/config/
-/nginx-proxy/data/
-/nginx-proxy/letsencrypt/
+zigbee2mqtt/data/
+nginx-proxy/data/
+nginx-proxy/letsencrypt/
 
 
 # ------------------------------------------

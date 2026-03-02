@@ -9,6 +9,13 @@ services:
 
     volumes:
         - type: bind
+          source: ./data
+          target: /app/data
+          read_only: false
+          bind:
+            create_host_path: true
+
+        - type: bind
           source: ./config/conf.yml
           target: /app/data/configuration.yaml
           read_only: false
