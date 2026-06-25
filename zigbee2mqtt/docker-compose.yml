@@ -36,7 +36,7 @@ services:
         - ${USB_DEVICE}:/dev/ttyACM0
 
     healthcheck:
-      test: ["CMD", "curl", "-f", "-s", "http://localhost:8080"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8080"]
       interval: 30s
       timeout: 10s
       retries: 3
