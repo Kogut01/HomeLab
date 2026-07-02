@@ -1,0 +1,36 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome
+    container_name: adguard
+    restart: unless-stopped
+
+    ports:
+      - "${ADGUARD_HOME_PORT_1}:80/tcp"
+      - "${ADGUARD_HOME_PORT_2}:3000/tcp"
+
+      - "${ADGUARD_HOME_PORT_3}:443/tcp"
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "853:853/tcp"
+
+    volumes:
+      - type: bind
+        source: ./work
+        target: /opt/adguardhome/work
+        read_only: false
+        bind:
+          create_host_path: true
+
+      - type: bind
+        source: ./conf
+        target: /opt/adguardhome/conf
+        read_only: false
+        bind:
+          create_host_path: true
+
+      - type: bind
+        source: ./certs
+        target: /opt/adguardhome/certs
+        read_only: false
+        bind:
+          create_host_path: true

@@ -10,7 +10,10 @@ home-assistant/config/
 zigbee2mqtt/data/
 nginx-proxy/data/
 nginx-proxy/letsencrypt/
-
+adguard/conf/
+adguard/work/
+adguard/certs/
+adguard/cron.md
 
 # ------------------------------------------
 # 1. System Files and OS Artifacts
