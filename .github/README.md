@@ -31,15 +31,14 @@ Wszystkie współdzielą wspólny plik konfiguracji [`.env`](../.env_example).
 
 | Usługa | Obraz | Opis |
 | :--- | :---: | :---: |
+| 🛡️ [Adguard Home](../adguard/docker-compose.yml) | `AdguardTeam/AdGuardHome` | Blokowanie reklam (DNS) |
 | 🚀 [Dashy](../dashy/docker-compose.yml) | `lissy93/dashy` | Dashboard domowy |
-| 📊 [Glances](../glances/docker-compose.yml) | `nicolargo/glances` | Monitoring systemu |
-| 🏠 [Home Assistant](../home-assistant/docker-compose.yml) | `home-assistant` | Automatyka domowa |
-| 📡 [Zigbee2MQTT](../zigbee2mqtt/docker-compose.yml) | `koenkk/zigbee2mqtt` | Most Zigbee → MQTT |
-| 🔗 [Mosquitto](../mqtt/docker-compose.yml) | `eclipse-mosquitto` | Broker MQTT |
-| 🍔 [Mealie](../mealie/docker-compose.yml) | `mealie-recipes/mealie` | Przepisy i planowanie posiłków |
-| 🍓 [Pi‑hole](../pihole/docker-compose.yml) | `pihole/pihole` | Blokowanie reklam (DNS) |
 | 📁 [FileBrowser](../filebrowser/docker-compose.yml) | `filebrowser/filebrowser` | Menedżer plików (web UI) |
-| 🎬 [Stremio](../stremio/docker-compose.yml) | `tsaridas/stremio-docker` | Serwer multimedialny |
+| 🏠 [Home Assistant](../home-assistant/docker-compose.yml) | `Home Assistant` | Automatyka domowa |
+| 🍔 [Mealie](../mealie/docker-compose.yml) | `mealie-recipes/mealie` | Przepisy i planowanie posiłków |
+| 🔗 [Mosquitto](../mqtt/docker-compose.yml) | `eclipse-mosquitto/mosquito` | Broker MQTT |
+| 🕸️ [Nginx Proxy](../nginx-proxy/docker-compose.yml) | `NginxProxyManager/nginx-proxy-manager` | Reverse proxy i certyfikaty SSL |
+| 📡 [Zigbee2MQTT](../zigbee2mqtt/docker-compose.yml) | `koenkk/zigbee2mqtt` | Most Zigbee → MQTT |
 
 </div>
 
@@ -79,8 +78,9 @@ Edytuj `.env` i uzupełnij wymagane wartości — strefę czasową, IP hosta, po
 
 ```dotenv
 TZ=Europe/Warsaw
-PIHOLE_WEBPASS=moje_tajne_haslo
-DASHY_PORT=61337
+DASHY_PORT=
+MEALIE_PORT=
+FILEBROWSER_PORT=
 # ...
 ```
 
@@ -156,13 +156,13 @@ HomeLab/
 ├── .github/                            # ⚙️ CI/CD, Dependabot, konfiguracja GitHub
 │   ├── workflows/
 │   └── dependabot.yml
+├── adguard/                            # 🛡️ DNS ad‑blocker
+│   └── docker-compose.yml
 ├── dashy/                              # 🚀 Dashboard
 │   ├── docker-compose.yml
 │   └── config/
 │       └── conf-example.yml            # ⚙️ Przykładowa konfiguracja Dashy
 ├── filebrowser/                        # 📁 Menedżer plików
-│   └── docker-compose.yml
-├── glances/                            # 📊 Monitoring systemu
 │   └── docker-compose.yml
 ├── home-assistant/                     # 🏠 Automatyka domowa
 │   └── docker-compose.yml
@@ -170,13 +170,7 @@ HomeLab/
 │   └── docker-compose.yml
 ├── mqtt/                               # 🔗 Broker MQTT (Mosquitto)
 │   └── docker-compose.yml
-├── pihole/                             # 🍓 DNS ad‑blocker
-│   ├── docker-compose.yml
-│   ├── blacklist/
-│   │   └── blacklist_urls.txt          # 🚪 Własna blacklista URL
-│   └── config/
-│       └── etc-dnsmasq.d               # ⚙️ Konfiguracja dnsmasq
-├── stremio/                            # 🎬 Serwer multimedialny
+├── nginx-proxy/                        # 🕸️ Reverse proxy
 │   └── docker-compose.yml
 ├── zigbee2mqtt/                        # 📡 Most Zigbee → MQTT
 │   ├── docker-compose.yml
